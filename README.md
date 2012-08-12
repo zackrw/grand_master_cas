@@ -1,7 +1,7 @@
 ##Grand Master CAS
 Grand Master CAS is a lightweight, easy library for [CAS authentication](http://www.jasig.org/cas/protocol)
 
-Grand Master CAS is easiest to use in an [express](http://expressjs.com/) app, but plays very nice with any node program.
+Grand Master CAS is extremely easy to use in an [express](http://expressjs.com/) app, but also plays very nicely with any node program.
 
 ####There are only three steps needed to get it going
 ######1. require it
