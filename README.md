@@ -18,7 +18,7 @@ Grand Master CAS is easiest to use in an [express](http://expressjs.com/) app, b
       redirectUrl: '/splash'            // the route that cas.redirecter will send to if not authed. Defaults to '/'
     });
 ######3. throw it in your routes
-app.get('/splash', routes.splash);
+     app.get('/splash', routes.splash);
      // grand_master_cas provides a logout
      app.get('/logout', cas.logout);
      // cas.bouncer prompts for authentication and performs login if not logged in. If logged in it passes on.
