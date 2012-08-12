@@ -1,0 +1,21 @@
+{
+  "name": "grand_master_cas",
+  "version": "0.0.1",
+  "scripts": {
+  },
+  "dependencies": {
+  },
+  "description": "Simple, easy to use CAS authentication library for Node.JS.",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:xaq2892/grand_master_cas.git"
+  },
+  "keywords": [
+    "CAS",
+    "login",
+    "authentication",
+    "yale"
+  ],
+  "author": "Zack Reneau-Wedeen",
+  "license": "MIT"
+}
