@@ -28,7 +28,7 @@ Grand Master CAS is extremely easy to use in an [express](http://expressjs.com/)
 
 For an example express app which uses Yale University's CAS login, check out /examples/yale_cas_express
 
-*emphasis*Once the user is logged in, Grand Master CAS sets req.session.cas_user (or your sessionName configuration option) equal to the user's username supplied by cas.
+*Once the user is logged in, Grand Master CAS sets req.session.cas_user (or your sessionName configuration option) equal to the user's username supplied by cas.*
 
 ###Without express
 Without express, it's pretty much the same, just without the convenience of express routing.
