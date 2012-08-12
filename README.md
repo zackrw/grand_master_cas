@@ -19,12 +19,12 @@ Grand Master CAS is easiest to use in an [express](http://expressjs.com/) app, b
     });
 ######3. throw it in your routes
 app.get('/splash', routes.splash);
-    // grand_master_cas provides a logout
-    app.get('/logout', cas.logout);
-    // cas.bouncer prompts for authentication and performs login if not logged in. If logged in it passes on.
-    app.get('/login', cas.bouncer, routes.login);
-    // cas.redirecter redirects to the redirectUrl supplied above if not logged in.
-    app.get('/', cas.redirecter, routes.index);
+     // grand_master_cas provides a logout
+     app.get('/logout', cas.logout);
+     // cas.bouncer prompts for authentication and performs login if not logged in. If logged in it passes on.
+     app.get('/login', cas.bouncer, routes.login);
+     // cas.redirecter redirects to the redirectUrl supplied above if not logged in.
+     app.get('/', cas.redirecter, routes.index);
 
 For an example express app which uses Yale University's CAS login, check out /examples/yale_cas_express
 
@@ -51,4 +51,4 @@ Without express, it's pretty much the same, just without the convenience of expr
       });
     });
 
-Grand Master CAS is written by Zack Reneau-Wedeen
+Grand Master CAS is written by [Zack Reneau-Wedeen](http://zackrw.com)
