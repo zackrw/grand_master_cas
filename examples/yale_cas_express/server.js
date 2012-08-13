@@ -7,7 +7,7 @@
  *  3 STEPS
  *  1. require grand_master_cas
  *  2. configure cas
- *  3. add bouncers and redirecters method to protected routes
+ *  3. add bouncers and blockers method to protected routes
  *
  */
 
@@ -51,7 +51,7 @@ app.get('/splash', routes.splash);
 app.get('/logout', cas.logout);
 
 app.get('/login', cas.bouncer, routes.login);
-app.get('/', cas.redirecter, routes.index);
+app.get('/', cas.blocker, routes.index);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

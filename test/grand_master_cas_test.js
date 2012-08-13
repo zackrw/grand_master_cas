@@ -141,7 +141,6 @@ describe( 'Grand Master CAS', function(){
       var res = {};
       var next = function(){};
       res.redirect = sinon.spy();
-
       cas.blocker(req, res, next, cas.redirectUrl);
       assert(res.redirect.calledWith('/splash'));
     });
