@@ -1,7 +1,7 @@
 ##Grand Master CAS
 Grand Master CAS is a lightweight, easy library for [CAS authentication](http://www.jasig.org/cas/protocol)
 
-Grand Master CAS is easiest to use in an [express](http://expressjs.com/) app, but plays very nice with any node program.
+Grand Master CAS is extremely easy to use in an [express](http://expressjs.com/) app, but also plays very nicely with any node program.
 
 ####There are only three steps needed to get it going
 ######1. require it
@@ -18,15 +18,17 @@ Grand Master CAS is easiest to use in an [express](http://expressjs.com/) app, b
       redirectUrl: '/splash'            // the route that cas.redirecter will send to if not authed. Defaults to '/'
     });
 ######3. throw it in your routes
-app.get('/splash', routes.splash);
-    // grand_master_cas provides a logout
-    app.get('/logout', cas.logout);
-    // cas.bouncer prompts for authentication and performs login if not logged in. If logged in it passes on.
-    app.get('/login', cas.bouncer, routes.login);
-    // cas.redirecter redirects to the redirectUrl supplied above if not logged in.
-    app.get('/', cas.redirecter, routes.index);
+     app.get('/splash', routes.splash);
+     // grand_master_cas provides a logout
+     app.get('/logout', cas.logout);
+     // cas.bouncer prompts for authentication and performs login if not logged in. If logged in it passes on.
+     app.get('/login', cas.bouncer, routes.login);
+     // cas.redirecter redirects to the redirectUrl supplied above if not logged in.
+     app.get('/', cas.redirecter, routes.index);
 
 For an example express app which uses Yale University's CAS login, check out /examples/yale_cas_express
+
+*Once the user is logged in, Grand Master CAS sets req.session.cas_user (or your sessionName configuration option) equal to the user's username supplied by cas.*
 
 ###Without express
 Without express, it's pretty much the same, just without the convenience of express routing.
@@ -51,4 +53,4 @@ Without express, it's pretty much the same, just without the convenience of expr
       });
     });
 
-Grand Master CAS is written by Zack Reneau-Wedeen
+Grand Master CAS is written by [Zack Reneau-Wedeen](http://zackrw.com)
