@@ -1,6 +1,6 @@
 {
   "name": "grand_master_cas",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "scripts": {
     "test": "mocha -r should -R spec"
   },
