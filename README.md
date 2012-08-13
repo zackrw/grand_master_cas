@@ -3,6 +3,9 @@ Grand Master CAS is a lightweight, easy library for [CAS authentication](http://
 
 Right now, parts of Grand Master CAS depends on [express](http://expressjs.com/), but hopefully soon it will play nicely with any node program.
 
+####Installation
+    npm install grand_master_cas
+
 ####There are only three steps needed to get it going
 ######1. require it
     var cas = require('grand_master_cas'); // cas is an object here, not a constructor
