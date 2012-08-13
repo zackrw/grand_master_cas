@@ -5,7 +5,8 @@ Right now, parts of Grand Master CAS depends on [express](http://expressjs.com/)
 
 ####There are only three steps needed to get it going
 ######1. require it
-    var cas = require('grand_master_cas'); // cas is an object here, not a constructor, because I return new GrandMasterCas in the module.
+    var cas = require('grand_master_cas'); // cas is an object here, not a constructor
+                                           // because I return new GrandMasterCas in the module.
 ######2. configure it
     cas.configure({
       casHost: "secure.its.yale.edu",   // required
