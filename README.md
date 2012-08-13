@@ -26,8 +26,14 @@ Right now, parts of Grand Master CAS depends on [express](http://expressjs.com/)
      // cas.blocker redirects to the redirectUrl supplied above if not logged in.
      app.get('/', cas.blocker, routes.index);
 
-For an example express app which uses Yale University's CAS login, check out /examples/yale_cas_express
+For an example express app which uses Yale University's CAS login, check out /examples/yale_cas_express.
+Run `node server`, open your browser to localhost:3000 and you'll see a prompt to log in via Yale CAS. If you have a net id, you should be able to explore full functionality.
 
 *Once the user is logged in, Grand Master CAS sets req.session.cas_user (or your sessionName configuration option) equal to the user's username supplied by cas.*
+
+####Tests
+Grand Master CAS is pretty well tested.
+In the root dir, run `npm test` or `make test` to run all tests
+Run `make coverage` to run the coverage test. or just open coverage.html from the git repo in your browser to see the latest coverage test.
 
 Grand Master CAS is written by [Zack Reneau-Wedeen](http://zackrw.com)
