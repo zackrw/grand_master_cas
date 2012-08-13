@@ -31,7 +31,9 @@ Right now, parts of Grand Master CAS depends on [express](http://expressjs.com/)
      app.get('/', cas.blocker, routes.index);
 
 For an example express app which uses Yale University's CAS login, check out /examples/yale_cas_express.
-Run `node server`, open your browser to localhost:3000 and you'll see a prompt to log in via Yale CAS. If you have a net id, you should be able to explore full functionality.
+    `npm install`
+    `node server`
+Open your browser to localhost:3000 and you'll see a prompt to log in via Yale CAS. If you have a net id, you should be able to explore full functionality.
 
 *Once the user is logged in, Grand Master CAS sets req.session.cas_user (or your sessionName configuration option) equal to the user's username supplied by cas.*
 
