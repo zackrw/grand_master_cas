@@ -1,0 +1,22 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/n/versions/0.8.0/bin/npm', 'test' ]
+2 info using npm@1.1.43
+3 info using node@v0.8.0
+4 verbose config file /Users/zack/.npmrc
+5 verbose config file /usr/local/n/versions/0.8.0/etc/npmrc
+6 verbose config file /usr/local/n/versions/0.8.0/lib/node_modules/npm/npmrc
+7 verbose read json /Users/zack/Desktop/programming/grand_master_cas/test/package.json
+8 error Error: ENOENT, open '/Users/zack/Desktop/programming/grand_master_cas/test/package.json'
+9 error If you need help, you may report this log at:
+9 error     <http://github.com/isaacs/npm/issues>
+9 error or email it to:
+9 error     <npm-@googlegroups.com>
+10 error System Darwin 11.4.0
+11 error command "node" "/usr/local/n/versions/0.8.0/bin/npm" "test"
+12 error cwd /Users/zack/Desktop/programming/grand_master_cas/test
+13 error node -v v0.8.0
+14 error npm -v 1.1.43
+15 error path /Users/zack/Desktop/programming/grand_master_cas/test/package.json
+16 error code ENOENT
+17 error errno 34
+18 verbose exit [ 34, true ]

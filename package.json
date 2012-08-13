@@ -2,8 +2,14 @@
   "name": "grand_master_cas",
   "version": "0.0.1",
   "scripts": {
+    "test": "mocha -r should -R spec"
   },
   "dependencies": {
+  },
+  "devDependencies": {
+    "mocha": "~1.3.2",
+    "should": "~1.1.0",
+    "sinon": "~1.4.2"
   },
   "description": "Simple, easy to use CAS authentication library for Node.JS.",
   "repository": {
@@ -16,6 +22,6 @@
     "authentication",
     "yale"
   ],
-  "author": "Zack Reneau-Wedeen",
+  "author": "Zack Reneau-Wedeen (zackrw.com)",
   "license": "MIT"
 }
