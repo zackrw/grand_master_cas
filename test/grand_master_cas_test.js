@@ -1,6 +1,8 @@
 var libpath = process.env['GMC_COV'] ? '../lib-cov' : '../lib';
 var assert  = require('assert');
 var util = require('util');
+var http = require('http');
+var https = require('https');
 var sinon = require('sinon');
 var cas = require( libpath + '/grand_master_cas' )
 
@@ -221,23 +223,28 @@ describe( 'Grand Master CAS', function(){
     });
 
     it('should reject a faulty ticket', function(done){
-      this.timeout(5000);
-      var req = {
-        query: {
-          ticket:'afaultyticket'
-        },
-        session: {}
-      };
-      var res = {};
-      var next = function(){};
-      res.redirect = sinon.spy();
-      cas.bouncer(req, res, next);
-      // Rather than put a callback in, just check every half second.
-      setInterval(function(){
-        if (res.redirect.calledWith('/splash')) {
-          done();
-        }
-      }, 500);
+      if (process.env.TEST_NET){
+        this.timeout(5000);
+        var req = {
+          query: {
+            ticket:'afaultyticket'
+          },
+          session: {}
+        };
+        var res = {};
+        var next = function(){};
+        res.redirect = sinon.spy();
+        cas.bouncer(req, res, next);
+        // Rather than put a callback in, just check every half second.
+        setInterval(function(){
+          if (res.redirect.calledWith('/splash')) {
+            done();
+          }
+        }, 500);
+      } else {
+        console.log( 'skipping network test, run TEST_NET=true npm test to ping yale network with faulty ticket' );
+        done();
+      }
     });
 
     it('should handle a ticket if there is one', function(){

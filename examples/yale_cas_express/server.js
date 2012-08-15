@@ -40,9 +40,9 @@ app.configure('development', function(){
 });
 
 cas.configure({
-  casHost: "secure.its.yale.edu",
+  casHost: 'secure.its.yale.edu',
   ssl: true,
-  service: "http://localhost:3000",
+  service: 'http://localhost:3000',
   redirectUrl: '/splash'
 });
 
@@ -54,5 +54,5 @@ app.get('/login', cas.bouncer, routes.login);
 app.get('/', cas.blocker, routes.index);
 
 http.createServer(app).listen(app.get('port'), function(){
-  console.log("Express server listening on port " + app.get('port'));
+  console.log('Express server listening on port ' + app.get('port'));
 });
