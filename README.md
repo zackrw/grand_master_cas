@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/xaq2892/grand_master_cas.png)](http://travis-ci.org/xaq2892/grand_master_cas)
 ##Grand Master CAS
 Grand Master CAS is a lightweight, easy library for [CAS authentication](http://www.jasig.org/cas/protocol)
 
