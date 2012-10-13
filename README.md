@@ -40,6 +40,6 @@ Open your browser to localhost:3000 and you'll see a prompt to log in via Yale C
 ####Tests
 Grand Master CAS is pretty well tested.
 In the root dir, run `npm test` or `make test` to run all tests.
-Run `make coverage` to run the coverage test. or just open coverage.html from the git repo in your browser to see the results of the latest coverage test.
+Run `make coverage` to run the coverage tests. or just open coverage.html from the git repo in your browser to see the results of the latest coverage test.
 
 Grand Master CAS is written by [Zack Reneau-Wedeen](http://zackrw.com)
