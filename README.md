@@ -13,6 +13,7 @@ Right now, parts of Grand Master CAS depends on [express](http://expressjs.com/)
 ######2. configure it
     cas.configure({
       casHost: "secure.its.yale.edu",   // required
+      casPath: "/cas",                  // your cas login route (defaults to "/cas")
       ssl: true,                        // is the cas url https? defaults to false
       port: 443,                        // defaults to 80 if ssl false, 443 if ssl true
       service: "http://localhost:3000", // your site
