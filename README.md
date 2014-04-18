@@ -15,6 +15,7 @@ Right now, parts of Grand Master CAS depends on [express](http://expressjs.com/)
       casHost: "secure.its.yale.edu",   // required
       casPath: "/cas",                  // your cas login route (defaults to "/cas")
       ssl: true,                        // is the cas url https? defaults to false
+      caFile: "/etc/ssl/myroot.pem",    // custom certificate authorities to load (defaults to using node's built-in list of Mozilla certs)
       port: 443,                        // defaults to 80 if ssl false, 443 if ssl true
       service: "http://localhost:3000", // your site
       sessionName: "cas_user",          // the cas user_name will be at req.session.cas_user (this is the default)
